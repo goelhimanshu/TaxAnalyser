@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Tax Saver - Analyse your income tax savings</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	</head>
+	<style>
+		.my-header h1 {
+			padding: 10px;
+			margin: 0px;
+		}
+
+		.my-header p {
+			background-color: black;
+			color: white;
+			padding: 0px 10px;
+		}
+		.taxSavingAnalysisFormContainer{
+			padding: 20px;
+			border-radius: 15px;
+			background-color: #dedede;
+		}
+		#taxSavingAnalysisForm h4{
+			margin-top: 0px;
+		}
+	</style>
+
+	<body>
+
+		<div class="my-header">
+			<h1>Minimize your income tax!</h1>
+			<p class="lead">
+				Analyse the impact of savings on your income tax
+			</p>
+		</div>
+
+		<div class="container">
+
+			<br />
+			<br />
+
+			<div class="row">
+				<div class="col-sm-4  col-xs-12 taxSavingAnalysisFormContainer">
+					<form id="taxSavingAnalysisForm">
+						<div class="text-center">
+							<h4> Enter Details</h4>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-xs-12 form-group">
+								<label for="age">Current age</label>
+								<input type="number" class="form-control" id="age" placeholder="Age in years" value="21">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="earnedIncome">Gross Income</label>
+							<input type="number" class="form-control" id="earnedIncome" placeholder="Earned Money" value="750000">
+						</div>
+						<div class="form-group">
+							<label for="investedIncome">Investment done under 80C</label>
+							<input type="number" class="form-control" id="investedIncome" placeholder="Invested Money" value="80000">
+						</div>
+
+						<div class="text-center">
+							<button type="submit" class="btn btn-primary">
+								Submit
+							</button>
+						</div>
+
+					</form>
+				</div>
+				<div class="col-sm-8 col-xs-12 statsContainer ">
+					
+					<div class="row">
+						<div class="text-center container-heading hidden">
+							<h3>Analysis Report</h3>
+						</div>
+						<br />
+						<div class="col-sm-8 col-xs-12" >
+							<div id="taxVariationChart"></div>
+						</div>
+						<div class="col-sm-4 col-xs-12" >
+							<div id="savingsDifferenceChart"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- /.container -->
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+		<!-- Google Charts Library-->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+		<!-- JavaScript -->
+		<script src="tax.js"></script>
+	</body>
+</html>
